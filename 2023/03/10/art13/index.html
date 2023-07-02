@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><title>计算机网络做题解析三 | Desert Eagle</title><meta name="author" content="xiakai"><meta name="copyright" content="xiakai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="​ &#x2F;etc&#x2F;resolv.conf的用途是解析：DNS解析的设置文件在： &#x2F;etc&#x2F;resolv.conf 邮件服务的设置文件： &#x2F;etc&#x2F;mail.rc DHCP的设置文件： &#x2F;etc&#x2F;dhcpd.conf 网络路由的设置文件： &#x2F;etc&#x2F;gateways 能够PING通同网段的节点，但却如PING不通其他网段的所有节点的最可能的原因(本机网关设置错误本机没有正确设置DNS对方运行的是不同的操">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络做题解析三">
+<meta property="og:url" content="http://example.com/2023/03/10/art13/index.html">
+<meta property="og:site_name" content="Desert Eagle">
+<meta property="og:description" content="​ &#x2F;etc&#x2F;resolv.conf的用途是解析：DNS解析的设置文件在： &#x2F;etc&#x2F;resolv.conf 邮件服务的设置文件： &#x2F;etc&#x2F;mail.rc DHCP的设置文件： &#x2F;etc&#x2F;dhcpd.conf 网络路由的设置文件： &#x2F;etc&#x2F;gateways 能够PING通同网段的节点，但却如PING不通其他网段的所有节点的最可能的原因(本机网关设置错误本机没有正确设置DNS对方运行的是不同的操">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+<meta property="article:published_time" content="2023-03-10T15:00:00.000Z">
+<meta property="article:modified_time" content="2023-07-02T16:01:25.351Z">
+<meta property="article:author" content="xiakai">
+<meta property="article:tag" content="study">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2023/03/10/art13/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '计算机网络做题解析三',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-07-03 00:01:25'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 5.4.2"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (false) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://s2.loli.net/2023/07/02/yrkGZL8aJRzlcTE.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">Desert Eagle</a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-heartbeat"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">计算机网络做题解析三</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-03-10T15:00:00.000Z" title="发表于 2023-03-10 23:00:00">2023-03-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-07-02T16:01:25.351Z" title="更新于 2023-07-03 00:01:25">2023-07-03</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>4分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="计算机网络做题解析三"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>​</p>
+<h2 id="etc-resolv-conf的用途是"><a href="#etc-resolv-conf的用途是" class="headerlink" title="/etc/resolv.conf的用途是"></a>/etc/resolv.conf的用途是</h2><p>解析：DNS解析的设置文件在： /etc/resolv.conf</p>
+<p>邮件服务的设置文件： /etc/mail.rc</p>
+<p>DHCP的设置文件： /etc/dhcpd.conf</p>
+<p>网络路由的设置文件： /etc/gateways</p>
+<h2 id="能够PING通同网段的节点，但却如PING不通其他网段的所有节点的最可能的原因"><a href="#能够PING通同网段的节点，但却如PING不通其他网段的所有节点的最可能的原因" class="headerlink" title="能够PING通同网段的节点，但却如PING不通其他网段的所有节点的最可能的原因("></a>能够PING通同网段的节点，但却如PING不通其他网段的所有节点的最可能的原因(</h2><p>本机网关设置错误<br>本机没有正确设置DNS<br>对方运行的是不同的操作系统<br>二层交换机故障<br>解析：本地网关设置错误，ping是TCP/IP协议族的一部分，其属于网络层协议。主要是用来检测网络是否通畅。如果要ping其他网段则需要设置网关。DNS设置错会影响访问公网服务器的域名，而不会影响内部子设备直接是否ping通。ping命令是跨操作系统的，即Windows主机能ping通Linux主机。二层交换机如果出现故障那么同网段主机则不会ping通。</p>
+<h2 id="常被提及的Dos攻击的是以下的行为（）"><a href="#常被提及的Dos攻击的是以下的行为（）" class="headerlink" title="常被提及的Dos攻击的是以下的行为（）"></a>常被提及的Dos攻击的是以下的行为（）</h2><p>A 侵入目标服务器，获取重要数据</p>
+<p>B 采用穷举的方式获得登录账号</p>
+<p>C 发送无效的请求，使得正确的请求无法被响应</p>
+<p>D 利用微软DOS从操作系统图的各种漏洞达到攻击的目的</p>
+<p>解析：Denial of Service(Dos),拒绝服务，DoS攻击是指故意的攻击网络协议实现的缺陷或直接通过野蛮手段残忍地耗尽被攻击对象的资源，目的是让目标计算机或网络无法提供正常的服务或资源访问，使目标系统服务系统停止响应甚至崩溃，而在此攻击中并不包括侵入目标服务器或目标网络设备。这些服务资源包括网络带宽，文件系统空间容量，开放的进程或者允许的连接。这种攻击会导致资源的匮乏，无论计算机的处理速度多快、内存容量多大、网络带宽的速度多快都无法避免这种攻击带来的后果。</p>
+<h2 id="以下不是DNS服务的作用的是（）"><a href="#以下不是DNS服务的作用的是（）" class="headerlink" title="以下不是DNS服务的作用的是（）"></a>以下不是DNS服务的作用的是（）</h2><p>将主机名翻译到指定的IP地址</p>
+<p>将IP地址反解成主机名</p>
+<p>解析特定类型的服务的地址，如MX，NS</p>
+<p>将IP解析成MAC地址</p>
+<p>解析：将IP地址转换成MAC地址是ARP协议的作用，DNS解析域名到IP地址是双向的，也可以解析特定类型的服务的地址。</p>
+<h2 id="在小红书公司的局域网中，署队长的私人电脑可以查看到的同事的电脑，也成功了登录了QQ，但无法访问到-公司的站点”http-www-xiaohongshu-com”-请协助署队长查找最有可能出现的问题的地方是（）"><a href="#在小红书公司的局域网中，署队长的私人电脑可以查看到的同事的电脑，也成功了登录了QQ，但无法访问到-公司的站点”http-www-xiaohongshu-com”-请协助署队长查找最有可能出现的问题的地方是（）" class="headerlink" title="在小红书公司的局域网中，署队长的私人电脑可以查看到的同事的电脑，也成功了登录了QQ，但无法访问到 公司的站点”http://www.xiaohongshu.com”,请协助署队长查找最有可能出现的问题的地方是（）"></a>在小红书公司的局域网中，署队长的私人电脑可以查看到的同事的电脑，也成功了登录了QQ，但无法访问到 公司的站点”<a target="_blank" rel="noopener" href="http://www.xiaohongshu.com”,请协助署队长查找最有可能出现的问题的地方是()/">http://www.xiaohongshu.com”,请协助署队长查找最有可能出现的问题的地方是（）</a></h2><p>A.UDP B. DHCP C. DNS D. HTTP</p>
+<p>解析：C,因为可以登录QQ，但是不能上网，所以是UDP没问题，能查看同事的电脑，说明DHCP协议也没问题，但是无法访问网络，原因可能是浏览器，也可能是HTTP协议，但是DNS是最基本的问题，也是最可能出现的问题。</p>
+<h2 id="将一个C类网络划分20个子网，最适合的子网掩码是多少（）"><a href="#将一个C类网络划分20个子网，最适合的子网掩码是多少（）" class="headerlink" title="将一个C类网络划分20个子网，最适合的子网掩码是多少（）"></a>将一个C类网络划分20个子网，最适合的子网掩码是多少（）</h2><p>A 255.255.255.240</p>
+<p>B 255.255.255.248</p>
+<p>C 255.255.255.252</p>
+<p>D 255.255.255.255</p>
+<p>解析：B,子网数是20，二进制是10100，所以至少需要5位来表示网络号，所以子网掩码部分应该是 11111111 11111111 11111111 11111000。所以255.255.255.248</p>
+<h2 id="以下哪种http状态下，浏览器会产生两次http请求（）"><a href="#以下哪种http状态下，浏览器会产生两次http请求（）" class="headerlink" title="以下哪种http状态下，浏览器会产生两次http请求（）"></a>以下哪种http状态下，浏览器会产生两次http请求（）</h2><p>A 400 B 404 C 302 D 304</p>
+<p>解析：302是临时重定向状态码，会再次访问http响应头中location字段的url，所以会产生两次http请求；304是客户端申请的资源存在，但是条件不满足；404是NOT FOUND，即服务器上无法找到请求资源；400是请求报文中存在语法错误；</p>
+<h2 id="局域网的网络地址192-168-1-0-24，局域网络连接其他网络的网关地址是192-168-1-1。主机192-168-1-20-访问172-16-1-0-24网络时，其路由设置正确的是（）"><a href="#局域网的网络地址192-168-1-0-24，局域网络连接其他网络的网关地址是192-168-1-1。主机192-168-1-20-访问172-16-1-0-24网络时，其路由设置正确的是（）" class="headerlink" title="局域网的网络地址192.168.1.0/24，局域网络连接其他网络的网关地址是192.168.1.1。主机192.168.1.20 访问172.16.1.0/24网络时，其路由设置正确的是（）"></a>局域网的网络地址192.168.1.0/24，局域网络连接其他网络的网关地址是192.168.1.1。主机192.168.1.20 访问172.16.1.0/24网络时，其路由设置正确的是（）</h2><p>A route add default 192.168.1.0 netmask 172.16.1.1 metric 1</p>
+<p>B route add -net 172.16.1.0 gw 192.168.1.1 netmask 255.255.255.0 metric 1</p>
+<p>C route add -net 192.168.1.0 gw 192.168.1.1 netmask 255.255.255.0 metric 1</p>
+<p>D route add -net 172.16.1.0 gw 172.16.1.1 netmask 255.255.255.0 metric 1</p>
+<p>解析：B，-net 后面跟的是目标网络，gw就是gateway（网关入口）就是你从哪个网关去到那个目标网络。</p>
+<h2 id="建立一条TCP连接需要（）个步骤，关闭一个TCP连接需要（）个步骤"><a href="#建立一条TCP连接需要（）个步骤，关闭一个TCP连接需要（）个步骤" class="headerlink" title="建立一条TCP连接需要（）个步骤，关闭一个TCP连接需要（）个步骤"></a>建立一条TCP连接需要（）个步骤，关闭一个TCP连接需要（）个步骤</h2><p>解析：3；4</p>
+<p>三次握手，四次挥手。<br>​​​​<img src="https://s2.loli.net/2023/07/03/kmYVS8r9v4qzAHf.png" alt="3次握手四次挥手.png"></p>
+<p>​</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">xiakai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2023/03/10/art13/">http://example.com/2023/03/10/art13/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Desert Eagle</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/03/20/art14/"><img class="prev-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">计算机网络做题解析四</div></div></a></div><div class="next-post pull-right"><a href="/2023/03/05/art12/"><img class="next-cover" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计算机网络做题解析二</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://s2.loli.net/2023/07/02/yrkGZL8aJRzlcTE.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">xiakai</div><div class="author-info__description">一个网站描述</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xiakai000"><i></i><span>🛴前往小家...</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><center>主域名：<br><a target="_blank" rel="noopener" href="https://www.xiakai000.github.io"><b><font color="#5ea6e5">xiakai000.github.io</font></b></a>&nbsp;|&nbsp;</center></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#etc-resolv-conf%E7%9A%84%E7%94%A8%E9%80%94%E6%98%AF"><span class="toc-number">1.</span> <span class="toc-text">&#x2F;etc&#x2F;resolv.conf的用途是</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%BD%E5%A4%9FPING%E9%80%9A%E5%90%8C%E7%BD%91%E6%AE%B5%E7%9A%84%E8%8A%82%E7%82%B9%EF%BC%8C%E4%BD%86%E5%8D%B4%E5%A6%82PING%E4%B8%8D%E9%80%9A%E5%85%B6%E4%BB%96%E7%BD%91%E6%AE%B5%E7%9A%84%E6%89%80%E6%9C%89%E8%8A%82%E7%82%B9%E7%9A%84%E6%9C%80%E5%8F%AF%E8%83%BD%E7%9A%84%E5%8E%9F%E5%9B%A0"><span class="toc-number">2.</span> <span class="toc-text">能够PING通同网段的节点，但却如PING不通其他网段的所有节点的最可能的原因(</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E8%A2%AB%E6%8F%90%E5%8F%8A%E7%9A%84Dos%E6%94%BB%E5%87%BB%E7%9A%84%E6%98%AF%E4%BB%A5%E4%B8%8B%E7%9A%84%E8%A1%8C%E4%B8%BA%EF%BC%88%EF%BC%89"><span class="toc-number">3.</span> <span class="toc-text">常被提及的Dos攻击的是以下的行为（）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E4%B8%8D%E6%98%AFDNS%E6%9C%8D%E5%8A%A1%E7%9A%84%E4%BD%9C%E7%94%A8%E7%9A%84%E6%98%AF%EF%BC%88%EF%BC%89"><span class="toc-number">4.</span> <span class="toc-text">以下不是DNS服务的作用的是（）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E5%B0%8F%E7%BA%A2%E4%B9%A6%E5%85%AC%E5%8F%B8%E7%9A%84%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%AD%EF%BC%8C%E7%BD%B2%E9%98%9F%E9%95%BF%E7%9A%84%E7%A7%81%E4%BA%BA%E7%94%B5%E8%84%91%E5%8F%AF%E4%BB%A5%E6%9F%A5%E7%9C%8B%E5%88%B0%E7%9A%84%E5%90%8C%E4%BA%8B%E7%9A%84%E7%94%B5%E8%84%91%EF%BC%8C%E4%B9%9F%E6%88%90%E5%8A%9F%E4%BA%86%E7%99%BB%E5%BD%95%E4%BA%86QQ%EF%BC%8C%E4%BD%86%E6%97%A0%E6%B3%95%E8%AE%BF%E9%97%AE%E5%88%B0-%E5%85%AC%E5%8F%B8%E7%9A%84%E7%AB%99%E7%82%B9%E2%80%9Dhttp-www-xiaohongshu-com%E2%80%9D-%E8%AF%B7%E5%8D%8F%E5%8A%A9%E7%BD%B2%E9%98%9F%E9%95%BF%E6%9F%A5%E6%89%BE%E6%9C%80%E6%9C%89%E5%8F%AF%E8%83%BD%E5%87%BA%E7%8E%B0%E7%9A%84%E9%97%AE%E9%A2%98%E7%9A%84%E5%9C%B0%E6%96%B9%E6%98%AF%EF%BC%88%EF%BC%89"><span class="toc-number">5.</span> <span class="toc-text">在小红书公司的局域网中，署队长的私人电脑可以查看到的同事的电脑，也成功了登录了QQ，但无法访问到 公司的站点”http:&#x2F;&#x2F;www.xiaohongshu.com”,请协助署队长查找最有可能出现的问题的地方是（）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E4%B8%80%E4%B8%AAC%E7%B1%BB%E7%BD%91%E7%BB%9C%E5%88%92%E5%88%8620%E4%B8%AA%E5%AD%90%E7%BD%91%EF%BC%8C%E6%9C%80%E9%80%82%E5%90%88%E7%9A%84%E5%AD%90%E7%BD%91%E6%8E%A9%E7%A0%81%E6%98%AF%E5%A4%9A%E5%B0%91%EF%BC%88%EF%BC%89"><span class="toc-number">6.</span> <span class="toc-text">将一个C类网络划分20个子网，最适合的子网掩码是多少（）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E5%93%AA%E7%A7%8Dhttp%E7%8A%B6%E6%80%81%E4%B8%8B%EF%BC%8C%E6%B5%8F%E8%A7%88%E5%99%A8%E4%BC%9A%E4%BA%A7%E7%94%9F%E4%B8%A4%E6%AC%A1http%E8%AF%B7%E6%B1%82%EF%BC%88%EF%BC%89"><span class="toc-number">7.</span> <span class="toc-text">以下哪种http状态下，浏览器会产生两次http请求（）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B1%80%E5%9F%9F%E7%BD%91%E7%9A%84%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80192-168-1-0-24%EF%BC%8C%E5%B1%80%E5%9F%9F%E7%BD%91%E7%BB%9C%E8%BF%9E%E6%8E%A5%E5%85%B6%E4%BB%96%E7%BD%91%E7%BB%9C%E7%9A%84%E7%BD%91%E5%85%B3%E5%9C%B0%E5%9D%80%E6%98%AF192-168-1-1%E3%80%82%E4%B8%BB%E6%9C%BA192-168-1-20-%E8%AE%BF%E9%97%AE172-16-1-0-24%E7%BD%91%E7%BB%9C%E6%97%B6%EF%BC%8C%E5%85%B6%E8%B7%AF%E7%94%B1%E8%AE%BE%E7%BD%AE%E6%AD%A3%E7%A1%AE%E7%9A%84%E6%98%AF%EF%BC%88%EF%BC%89"><span class="toc-number">8.</span> <span class="toc-text">局域网的网络地址192.168.1.0&#x2F;24，局域网络连接其他网络的网关地址是192.168.1.1。主机192.168.1.20 访问172.16.1.0&#x2F;24网络时，其路由设置正确的是（）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BB%BA%E7%AB%8B%E4%B8%80%E6%9D%A1TCP%E8%BF%9E%E6%8E%A5%E9%9C%80%E8%A6%81%EF%BC%88%EF%BC%89%E4%B8%AA%E6%AD%A5%E9%AA%A4%EF%BC%8C%E5%85%B3%E9%97%AD%E4%B8%80%E4%B8%AATCP%E8%BF%9E%E6%8E%A5%E9%9C%80%E8%A6%81%EF%BC%88%EF%BC%89%E4%B8%AA%E6%AD%A5%E9%AA%A4"><span class="toc-number">9.</span> <span class="toc-text">建立一条TCP连接需要（）个步骤，关闭一个TCP连接需要（）个步骤</span></a></li></ol></div></div></div></div></main><footer id="footer" style="background-image: url('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By xiakai</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><canvas class="fireworks" mobile="false"></canvas><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/fireworks.min.js"></script><script defer="defer" id="fluttering_ribbon" mobile="true" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/canvas-fluttering-ribbon.min.js"></script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
